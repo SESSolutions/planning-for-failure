@@ -17,7 +17,7 @@ The user clicked on the button, but the UI was not updated because the payment A
 Assumption: Rest API post method and payment API may be in the same code block. The order Id is the same for the number of times the user clicked on the submit button, and hence the order was registered once in the database, but payment was processed twice. Payment API did not return in time after the first click and the user clicked again when he did not see any update on the UI. 
 
 #### Solutions
-To prevent users from clicking twice on the submit button, information may be displayed on the UI to inform the user that a payment for a placed order is being processed. In addition, the time that a payment API takes to return for a worst case may be displayed to the UI as the time it may take to process a payment of an order. Displaying an worst case estimated time would help the users not to click on the button more than necessary.
+To prevent users from clicking twice on the submit button, information may be displayed on the UI to inform the user that a payment for a placed order is being processed. In addition, the time that a payment API takes to return for a worst case may be displayed to the UI as the time it may take to process a payment of an order. Displaying a worst case estimated time would help the users not to click on the button more than necessary.
 
 Another solution may be to disable the order submit button once user clicks on it, and order is registered, and payment is being processed. The order button would be enabled after the payment API returns for the click and the UI is updated.
 
